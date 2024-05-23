@@ -2,34 +2,32 @@ version: '3.8'
 
 services:
   ollama:
+    image: ollama/ollama
+    container_name: ollama
     volumes:
       - ollama:/root/.ollama
-    container_name: ollama
-    pull_policy: always
+    restart: always
     tty: true
-    restart: unless-stopped
-    image: ollama/ollama:${OLLAMA_DOCKER_TAG-latest}
 
   cusmato:
-    build:
-      context: .
-      args:
-        OLLAMA_BASE_URL: '/ollama'
-      dockerfile: Dockerfile
+    build: .
     container_name: cusmato
-    volumes:
-      - cusmato:/app/backend/data
     depends_on:
       - ollama
-    ports:
-      - ${OPEN_WEBUI_PORT-3000}:8080
     environment:
-      - 'OLLAMA_BASE_URL=http://ollama:11434'
-      - 'WEBUI_SECRET_KEY='
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - WEBUI_SECRET_KEY=your_secret_key_here
+      - OPEN_WEBUI_PORT=8080
+    volumes:
+      - cusmato:/app/backend/data
+    ports:
+      - "8080:8080"
     extra_hosts:
-      - host.docker.internal:host-gateway
-    restart: unless-stopped
+      - "host.docker.internal:host-gateway"
+    restart: always
 
 volumes:
-  ollama: {}
-  cusmato: {}
+  ollama:
+    driver: local
+  cusmato:
+    driver: local
