@@ -214,13 +214,18 @@ if CUSTOM_NAME:
                 shutil.copyfileobj(r.raw, f)
 
         # Fetch the name from the API
-        r = requests.get(f"https://api.Cusmato.com/api/v1/custom/{CUSTOM_NAME}")
-        data = r.json()
-        if r.ok:
-            cusmato = data["name"]
+        api_url = f"https://api.cusmato.com/api/v1/custom/{CUSTOM_NAME}"
+        r = requests.get(api_url)
+        if r.status_code == 200:
+            data = r.json()
+            cusmato = data.get("name", "cusmato")  # Safely get the name or default to "cusmato"
+        else:
+            log.error(f"Failed to fetch custom name from API: {r.status_code}")
     except Exception as e:
         log.exception(e)
-        pass
+        cusmato = "cusmato"  # Default value in case of an error
+
+log.info(f"Custom name set to: {cusmato}")
 
 ####################################
 # File Upload DIR
