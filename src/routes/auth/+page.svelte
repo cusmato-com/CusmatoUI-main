@@ -68,7 +68,7 @@
 
 <svelte:head>
 	<title>
-		{`${cusmato}`}
+		Cusmato
 	</title>
 </svelte:head>
 
@@ -103,9 +103,7 @@
 						class="flex items-center justify-center gap-3 text-xl sm:text-2xl text-center font-bold dark:text-gray-200"
 					>
 						<div>
-							{$i18n.t('Signing in')}
-							{$i18n.t('to')}
-							{cusmato}
+						Sign in to Cusmato
 						</div>
 
 						<div>
