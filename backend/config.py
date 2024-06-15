@@ -71,7 +71,6 @@ for source in log_sources:
 
 log.setLevel(SRC_LOG_LEVELS["CONFIG"])
 
-
 cusmato = os.environ.get("cusmato", "cusmato")
 if cusmato != "cusmato":
     cusmato += " (cusmato)"

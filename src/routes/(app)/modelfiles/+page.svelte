@@ -76,7 +76,7 @@
 
 <svelte:head>
 	<title>
-		{$i18n.t('Modelfiles')} | {cusmato}
+		{$i18n.t('Modelfiles')} | Cusmato
 	</title>
 </svelte:head>
 

@@ -79,7 +79,7 @@
 </script>
 
 <svelte:head>
-	<title>{$i18n.t('Admin Panel')} | {cusmato}</title>
+	<title>{$i18n.t('Admin Panel')} | Cusmato</title>
 </svelte:head>
 
 {#key selectedUser}

@@ -858,8 +858,8 @@
 <svelte:head>
 	<title>
 		{title
-			? `${title.length > 30 ? `${title.slice(0, 30)}...` : title} | ${cusmato}`
-			: `${cusmato}`}
+			? `${title.length > 30 ? `${title.slice(0, 30)}...` : title} | $Cusmato`
+			: `$Cusmato`}
 	</title>
 </svelte:head>
 

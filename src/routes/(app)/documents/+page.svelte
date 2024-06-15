@@ -152,7 +152,7 @@
 </script>
 
 <svelte:head>
-	<title>{$i18n.t('Documents')} | {cusmato}</title>
+	<title>{$i18n.t('Documents')} | Cusmato</title>
 </svelte:head>
 
 {#if dragged}

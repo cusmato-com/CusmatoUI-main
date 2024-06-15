@@ -33,7 +33,7 @@ def post_webhook(url: str, message: str, event_data: dict) -> bool:
                 "sections": [
                     {
                         "activityTitle": message,
-                        "activitySubtitle": f"{cusmato} ({VERSION}) - {action}",
+                        "activitySubtitle": f"Cusmato ({VERSION}) - {action}",
                         "activityImage": WEBUI_FAVICON_URL,
                         "facts": facts,
                         "markdown": True,

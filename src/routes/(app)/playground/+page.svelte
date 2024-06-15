@@ -264,7 +264,7 @@
 
 <svelte:head>
 	<title>
-		{$i18n.t('Playground')} | {cusmato}
+		{$i18n.t('Playground')} | Cusmato
 	</title>
 </svelte:head>
 

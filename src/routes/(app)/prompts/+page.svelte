@@ -40,7 +40,7 @@
 
 <svelte:head>
 	<title>
-		{$i18n.t('Prompts')} | {cusmato}
+		{$i18n.t('Prompts')} | Cusmato
 	</title>
 </svelte:head>
 

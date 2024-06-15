@@ -26,7 +26,7 @@
 		<div class="flex justify-between items-start">
 			<div class="text-xl font-bold">
 				{$i18n.t('What’s New in')}
-				{cusmato}
+				Cusmato
 				<Confetti x={[-1, -0.25]} y={[0, 0.5]} />
 			</div>
 			<button

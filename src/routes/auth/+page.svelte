@@ -123,12 +123,12 @@
 							<div class=" text-2xl font-bold">
 								{mode === 'signin' ? $i18n.t('Sign in') : $i18n.t('Sign up')}
 								{$i18n.t('to')}
-								{cusmato}
+								Cusmato
 							</div>
 
 							{#if mode === 'signup'}
 								<div class=" mt-1 text-xs font-medium text-gray-500">
-									ⓘ {cusmato}
+									ⓘ Cusmato
 									{$i18n.t(
 										'does not make any external connections, and your data stays securely on your locally hosted server.'
 									)}

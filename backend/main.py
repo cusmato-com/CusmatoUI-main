@@ -357,8 +357,8 @@ async def get_manifest_json():
 async def get_opensearch_xml():
     xml_content = rf"""
     <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-    <ShortName>{cusmato}</ShortName>
-    <Description>Search {cusmato}</Description>
+    <ShortName>Cusmato</ShortName>
+    <Description>Search Cusmato</Description>
     <InputEncoding>UTF-8</InputEncoding>
     <Image width="16" height="16" type="image/x-icon">{WEBUI_URL}/favicon.png</Image>
     <Url type="text/html" method="get" template="{WEBUI_URL}/?q={"{searchTerms}"}"/>

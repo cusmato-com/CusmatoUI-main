@@ -69,7 +69,7 @@
 </script>
 
 <svelte:head>
-	<title>{cusmato}</title>
+	<title>Cusmato</title>
 	<link rel="icon" href="{WEBUI_BASE_URL}/static/favicon.png" />
 
 	<!-- rosepine themes have been disabled as it's not up to date with our latest version. -->
